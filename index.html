@@ -23,16 +23,20 @@
     
     <title>pygrace</title>
     
-    <link rel="stylesheet" href="onecolumnpygrace.css" type="text/css" />
+    <link rel="stylesheet" href="pygrace.css" type="text/css" />
     
     <script type="text/javascript">
       function on_navigation_click(divtoshow) {
         document.getElementById('about').style.display = 'none';
-        document.getElementById('timeline').style.display = 'none';
         document.getElementById('tutorial').style.display = 'none'; 
         document.getElementById('screenshots').style.display = 'none';
         document.getElementById('publications').style.display = 'none';
         document.getElementById(divtoshow).style.display = 'block';
+        document.getElementById('about'+'-nav').style.color = 'rgb(0,0,0)';
+        document.getElementById('tutorial'+'-nav').style.color = 'rgb(0,0,0)'; 
+        document.getElementById('screenshots'+'-nav').style.color = 'rgb(0,0,0)';
+        document.getElementById('publications'+'-nav').style.color = 'rgb(0,0,0)';
+        document.getElementById(divtoshow+'-nav').style.color = 'rgb(255,75,0)';
       };
     </script>
 
@@ -47,21 +51,16 @@
     
     <div id="navigation">
       <ul>
-	<li><a href="#"
+	<li><a href="#" id="about-nav"
 	       onclick="on_navigation_click('about');return
 			false;">About</a></li>
-	<li><a href="#"
+	<li><a href="#" id="tutorial-nav"
 	       onclick="on_navigation_click('tutorial');return
 			false;">Tutorial</a></li>
-	<li><a href="#"
+	<li><a href="#" id="screenshots-nav"
 	       onclick="on_navigation_click('screenshots');return
 			false;">Examples</a></li>
-  <!-- 
-  <li><a href="#"
-	       onclick="on_navigation_click('timeline');return
-         false;">Timeline</a></li>
-  -->
-	<li><a href="#"
+	<li><a href="#" id="publications-nav"
 	       onclick="on_navigation_click('publications');return
 			false;">Publications</a></li>
       </ul>
@@ -71,7 +70,7 @@
 
 <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ ABOUT -->
       <div id="about" class="content">
-	<h2>About</h2>
+        <!--<h2>About</h2>-->
 	<p>
 	  The pygrace project is a set of tools designed to
 	  act as an interface between
@@ -100,149 +99,19 @@
 	</p>
 
 	
-	<p>To get started with pygrace, see the <a href="#tutorial"
+	<p>To get started with pygrace, see the <a href="#"
 	       onclick="on_navigation_click('tutorial');return
 	       false;">tutorial</a>.</p>
 	
-      </div>
-      
-<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ TIMELINE -->
-      <div id="timeline" class="content">
-
-	<h2>Timeline</h2>
-
-	<div id="pygrace-merged">
-
-	  <h3>pygrace</h3>
-
-	  <div class="entry">
-	    <span class="point">Fall, 2009 (coming soon!)</span>
-	    <span class="description">The joint project will be merged
-	    back into the trunk.</span>
-	  </div>
-
-	  <div class="entry">
-	    <span class="point">August, 2009</span>
-	    <span class="description">In a branch in the SourceForge
-	    repository, we merged the two projects. To begin, we are
-	    keeping the two projects quite separate by including them
-	    as distinct subpackages in the pygrace package,
-	    pygrace.templates and pygrace.session.</span>
-	  </div>
-	  
-	  <div class="entry">
-	    <span class="point">June, 2009</span>
-	    <span class="description">Started discussing a merge of
-	    PyGrace (Dean Malmgren, Mike Stringer) and pygrace (Mike
-	    McKerns). Since the function of the two projects were
-	    quite different, we decided that a merge could be
-	    useful.</span>
-	  </div>
-
-	</div>
-	
-	<div id="pygrace-join">
-	  <div></div>
-	</div>
-	
-	<div id="PyGrace-branch">
-
-	  <h3>PyGrace</h3>
-
-	  <div class="entry">
-	    <span class="point">April, 2009</span>
-	    <span class="description">Roger Guimera and Irmak Sirer
-	    joined the PyGrace team and contributed valuable
-	    code and input.</span>
-	  </div>
-	  
-	  <div class="entry">
-	    <span class="point">December, 2008</span>
-	    <span class="description">Merged the fancy new
-	      object-oriented branch into trunk, and created the
-	      current SourceForge pygrace project (unfortunately, the
-	      SourceForge page is not case-sensitive, so the PyGrace
-	      project inadvertently clashed with the name of
-	      pygrace).</span>
-	  </div>
-	  
-	  <div class="entry">
-	    <span class="point">Fall 2008</span>
-	    <span class="description">Mike Stringer and Dean Malmgren
-	      created a branch and rewrote the entire PyGrace project
-	      code in an object oriented manner. Also, we
-	      added <a href="http://www.personal.psu.edu/cab38/ColorBrewer/ColorBrewer_intro.html">ColorBrewer</a>
-	      functionality in the object-oriented branch.</span>
-	  </div>
-
-	  <div class="entry">
-	    <span class="point">2006 &mdash; 2008</span>
-	    <span class="description">PyGrace is used by some members
-	      of the Amaral Lab, but the Python code of each user for
-	      making plots quickly grows unwieldy.  It is clear that
-	      the PyGrace code needs to be more object-oriented to
-	      facilitate the reuse of common patterns. </span>
-	  </div>
-
-	  <div class="entry">
-	    <span class="point">2006 &mdash; 2008</span>
-	    <span class="description">PyGrace is used by some members
-	      of the Amaral Lab, but the Python code of each user for
-	      making plots quickly grows unwieldy.  It is clear that
-	      the PyGrace code needs to be more object-oriented to
-	      facilitate the reuse of common patterns. Mike Stringer
-	      created a branch, and rewrote the code in an object
-	      oriented manner.</span>
-	  </div>
-
-	  <div class="entry">
-	    <span class="point">Summer, 2006</span>
-	    <span class="description">Alex F. (a high school summer
-	    intern) completes many details of implementing every
-	    attribute of Grace plots into PyGrace.</span>
-	  </div>
-
-	  <div class="entry">
-	    <span class="point">April, 2006</span>
-	    <span class="description">The PyGrace project
-	    begins. Mike Stringer, Dean Malmgren, Roger Guimera, Sam
-	    Seaver, Erin Sawardecker each make valuable contributions
-	    to PyGrace.</span>
-	  </div>
-	  
-	  <div class="entry">
-	    <span class="point">April, 2006</span>
-	    <span class="description">Inspired by hand-rolled Python
-	    wrappers around other programs (such as xfig), the Amaral
-	    Lab starts discussing the desire for a Python interface
-	    for creating nicely formatted plots.  Since the Amaral Lab
-	    already heavily used Grace for simple data analysis, a
-	    Python wrapper around Grace was a natural fit.</span>
-	  </div>
-	  
-
-	</div>
-
-	<div id="pygrace-branch">
-	  <h3>pygrace</h3>
-
-	  <div class="entry">
-	    <span class="point">Coming soon</span>
-	    <span class="description">The history of pygrace.</span>
-	  </div>
-
-	</div>
-
-
-	<div class="bottom"></div>
-
       </div>
       
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 TUTORIAL -->
       <div id="tutorial" class="content">
 
-	<h2>Tutorial</h2>
+  <!--
+  <h2>Tutorial</h2>
+  -->
 
   <!--
 	<p>
@@ -411,7 +280,10 @@ TUTORIAL -->
       
 <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ SCREENSHOTS -->
       <div id="screenshots" class="content">
-	<h2>Examples</h2>
+      <!--
+      <h2>Examples</h2>
+      -->
+
 	<p>
 	  Here are some examples of the types of figures that you can
 	  create with pygrace templates. If you are interested in
@@ -556,7 +428,7 @@ TUTORIAL -->
       
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ PUBLICATIONS -->
       <div id="publications" class="content">
-	<h2>Publications</h2>
+        <!--<h2>Publications</h2>-->
 	<p>If you use pygrace in a scientific publication, please let
 	us know and we will add a link to your publication on this
 	page (where <em>everybody</em> will see it).</p>

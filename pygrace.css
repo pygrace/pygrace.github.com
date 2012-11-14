@@ -21,6 +21,10 @@ are set to display:none) */
 /* ------------- */
 
 /* ------------------------------------------------------------------- header */
+#header {
+  margin: 0px;
+  margin-top: 25px;
+}
 #header h1 {
     color: rgb(0,75,255);
     margin: 0px;

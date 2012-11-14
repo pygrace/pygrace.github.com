@@ -159,43 +159,32 @@ TUTORIAL -->
 
 	<p>
 	  To clone the PyGrace repository, change to a directory where you
-	  want to put PyGrace, and type:
+	  want to put the PyGrace code and type:
 	</p>
 
 	<span class="command">
 	  git clone https://github.com/pygrace/templates.git PyGrace
 	</span>
 
-	<p>
-	  From here on out, it is important to use the &ldquo;correct&rdquo;
-	  capitalization of PyGrace (capital P and G).  Then, make
-	  sure that the directory you are in is on the python path
-	  (the PYTHONPATH environment variable).  One convenient way
-	  to do this is to add a line in your ~/.bashrc file that
-	  says:
-	</p>
+  <p>
+    To install PyGrace, all you need to do is enter into the PyGrace directory you just created and run setup.py:
+  </p>
 
 	<span class="command">
-	  export PYTHONPATH=$PYTHONPATH:/path/to/your/pybrary/
+    cd PyGrace</br>
+    python setup.py install
 	</span>
 
 	<p>
-	  Note that it is not necessary to call the directory where PyGrace is
-	  located &ldquo;the pybrary.&rdquo; After the location of
-	  PyGrace is on the PYTHONPATH, import statements in python
-	  scripts will look in that directory (.../pybrary/) for
-	  modules, and since PyGrace is a package (it has an
-	  __init__.py file in the directory), the directory will act
-	  like a module.  Now, make sure that you have executed the
-	  ~/.bashrc file by running.
+  By default, Python will attempt to install PyGrace in the global Python site-packages directory. If you don't have permissions to do this (or prefer not to install PyGrace globally), you can <a href="http://docs.python.org/2/install/index.html#alternate-installation-the-user-scheme">install it locally by adding the --user option</a>:
 	</p>
 
 	<span class="command">
-	  source ~/.bashrc
-	</span>
-	
+	  python setup.py install --user
+  </span>
+
 	<p>
-	  That should do the trick.  You can test that python can find the
+	  You can test that python can find the
 	  PyGrace package by opening an interactive python prompt and
 	  typing:
 	</p>

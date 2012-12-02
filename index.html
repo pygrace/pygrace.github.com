@@ -28,13 +28,15 @@
     <script type="text/javascript">
       function on_navigation_click(divtoshow) {
         document.getElementById('about').style.display = 'none';
-        document.getElementById('tutorial').style.display = 'none'; 
-        document.getElementById('screenshots').style.display = 'none';
+        document.getElementById('installation').style.display = 'none'; 
+        document.getElementById('session').style.display = 'none';
+        document.getElementById('templates').style.display = 'none';
         document.getElementById('publications').style.display = 'none';
         document.getElementById(divtoshow).style.display = 'block';
         document.getElementById('about'+'-nav').style.color = 'rgb(0,0,0)';
-        document.getElementById('tutorial'+'-nav').style.color = 'rgb(0,0,0)'; 
-        document.getElementById('screenshots'+'-nav').style.color = 'rgb(0,0,0)';
+        document.getElementById('installation'+'-nav').style.color = 'rgb(0,0,0)'; 
+        document.getElementById('session'+'-nav').style.color = 'rgb(0,0,0)';
+        document.getElementById('templates'+'-nav').style.color = 'rgb(0,0,0)';
         document.getElementById('publications'+'-nav').style.color = 'rgb(0,0,0)';
         document.getElementById(divtoshow+'-nav').style.color = 'rgb(255,75,0)';
       };
@@ -54,12 +56,17 @@
 	<li><a href="#" id="about-nav"
 	       onclick="on_navigation_click('about');return
 			false;">About</a></li>
-	<li><a href="#" id="tutorial-nav"
-	       onclick="on_navigation_click('tutorial');return
-			false;">Tutorial</a></li>
-	<li><a href="#" id="screenshots-nav"
-	       onclick="on_navigation_click('screenshots');return
-			false;">Examples</a></li>
+	<li><a href="#" id="installation-nav"
+	       onclick="on_navigation_click('installation');return
+      false;">Installation</a></li>
+  <!--
+	<li><a href="#" id="session-nav"
+	       onclick="on_navigation_click('session');return
+      false;">Session</a></li>
+  -->
+	<li><a href="#" id="templates-nav"
+	       onclick="on_navigation_click('templates');return
+			false;">Templates</a></li>
 	<li><a href="#" id="publications-nav"
 	       onclick="on_navigation_click('publications');return
 			false;">Publications</a></li>
@@ -100,14 +107,14 @@
 
 	
 	<p>To get started with pygrace, see the <a href="#"
-	       onclick="on_navigation_click('tutorial');return
-	       false;">tutorial</a>.</p>
+	       onclick="on_navigation_click('installation');return
+	       false;">installation guide</a>.</p>
 	
       </div>
       
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 TUTORIAL -->
-      <div id="tutorial" class="content">
+      <div id="installation" class="content">
 
   <!--
   <h2>Tutorial</h2>
@@ -123,6 +130,7 @@ TUTORIAL -->
   </p>
   -->
 
+  <!--
 	<p>
 	  Visualizing data may be an integral part of the data
 	  analysis process, however, <em>pygrace is
@@ -135,7 +143,8 @@ TUTORIAL -->
 	  should be as painless as possible, the pain required to
 	  understand the analysis process is considered necessary, or
 	  even desirable (if you're into that sort of thing).
-	</p>
+  </p>
+  -->
 	
 	<p>
 	  This tutorial is meant to help with installation of pygrace,
@@ -151,7 +160,7 @@ TUTORIAL -->
 	  As pygrace is still young, the only method yet available to
 	  install it is to check out the source code from the
 	  git repository at
-	  the <a href="http://github.com/pygrace">github
+	  the <a href="http://github.com/pygrace/pygrace">Github
 	  page</a>. The next section describes how to do so.
 	</p>
 
@@ -163,7 +172,7 @@ TUTORIAL -->
 	</p>
 
 	<span class="command">
-	  git clone https://github.com/pygrace/templates.git PyGrace
+	  git clone https://github.com/pygrace/pygrace.git PyGrace
 	</span>
 
   <p>
@@ -210,9 +219,9 @@ TUTORIAL -->
 	<ul>
 
 	  <li>
-	    <a class="tutorialdiagram" 
+	    <a class="installationdiagram" 
 	       href="crow.pdf">
-	      <img class="tutorialimage" src="images/crow.png"/>
+	      <img class="installationimage" src="images/crow.png"/>
 	    <span class="title">
 	      PyGrace entity-relationship diagram
 	    </span>
@@ -230,9 +239,9 @@ TUTORIAL -->
           </li>
 
 	  <li>
-	    <a class="tutoriallink" 
+	    <a class="installationlink" 
 	       href="cheatsheet.pdf">
-	      <img class="tutorialimage" src="images/cheatsheet.png"/>
+	      <img class="installationimage" src="images/cheatsheet.png"/>
 	    <span class="title">
 	      PyGrace Cheatsheet
 	    </span>
@@ -246,9 +255,9 @@ TUTORIAL -->
           </li>
 
 	  <li>
-	    <a class="tutoriallink" 
+	    <a class="installationlink" 
 	       href="fulldiagram.pdf">
-	      <img class="tutorialimage" src="images/fulldiagram.png"/>
+	      <img class="installationimage" src="images/fulldiagram.png"/>
 	    <span class="title">
 	      PyGrace attribute diagram
 	    </span>
@@ -263,12 +272,23 @@ TUTORIAL -->
 
 	By refering to these diagrams and going through the examples,
 	you can develop a sense of how to use PyGrace. Please let us know what you think and
-  report bugs using <a href="http://github.com/pygrace">the github page</a> or <a href="mailto:pygrace@stoufferlab.org">via email</a>.
+  report bugs using <a href="http://github.com/pygrace/pygrace/issues">the GitHub page</a>.
 
       </div>
       
-<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ SCREENSHOTS -->
-      <div id="screenshots" class="content">
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ SESSION -->
+      <div id="session" class="content">
+      <!--
+      <h2>Examples</h2>
+      -->
+
+      <p>
+      TBD.
+      </p>
+      </div>
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ TEMPLATES -->
+      <div id="templates" class="content">
       <!--
       <h2>Examples</h2>
       -->
@@ -276,7 +296,7 @@ TUTORIAL -->
 	<p>
 	  Here are some examples of the types of figures that you can
 	  create with pygrace templates. If you are interested in
-	  contributing a screenshot of a figure made in pygrace,
+	  contributing a screenshot of a figure made in pygrace templates,
     <a href="mailto:pygrace@stoufferlab.org">contact us</a>.
 	</p>
 

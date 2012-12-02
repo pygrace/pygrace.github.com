@@ -43,7 +43,7 @@ are set to display:none) */
 #navigation li {
     display: inline;
     margin: 0px;
-    padding-left: 20px;
+    padding-left: 10px;
 }
 #navigation a {
     text-decoration: none;
@@ -169,53 +169,53 @@ span.command {
 #publications a:hover {color:rgb(150,75,0)}
 #publications a:active {color:rgb(150,75,0);}
 
-/* --------------------------------------------------------- tutorial */
-#tutorial {
+/* --------------------------------------------------------- installation */
+#installation {
     margin-right: 0%;
 }
-#tutorial ul {
+#installation ul {
     list-style-type: none;
     padding: 0em;
     margin: 0em;
 }
-#tutorial li {
+#installation li {
     padding-top: 7px;
     border-top: 1px solid rgb(180,180,180);
     height: 200px;
     padding-bottom: 30px;
     font-size: small;
 }
-#tutorial span.title {
+#installation span.title {
     display: block;
     font-weight: bold;
 }
-#tutorial span.caption {
+#installation span.caption {
     display: block;
 }
-#tutorial a.tutoriallink {
+#installation a.installationlink {
     display: block;
 }
-#tutorial img.tutorialimage {
+#installation img.installationimage {
     float: right;
     height: 200px;
     padding: 5px;
     border: 1px solid rgb(180,180,180);
     margin-left: 10px;
 }
-#tutorial a {
+#installation a {
     text-decoration: none;
     outline: none;
 }
-#tutorial a:link {color:black;}
-#tutorial a:visited {color:black;}
-#tutorial a:hover {color:rgb(150,75,0)}
-#tutorial a:active {color:rgb(150,75,0);}
+#installation a:link {color:black;}
+#installation a:visited {color:black;}
+#installation a:hover {color:rgb(150,75,0)}
+#installation a:active {color:rgb(150,75,0);}
 
-/* --------------------------------------------------------- screenshots */
-#screenshots {
+/* --------------------------------------------------------- templates */
+#templates {
     margin-right: 0px;
 }
-#screenshots div.screenshot
+#templates div.screenshot
 {
     margin-bottom: 20px;
     margin-left: 7px;
@@ -223,11 +223,11 @@ span.command {
     float: left;
     text-align: center;
 }	
-#screenshots div.bottom
+#templates div.bottom
 {
     clear: both;
 }	
-#screenshots div.screenshot img
+#templates div.screenshot img
 {
     display: inline;
     margin: 0px;
@@ -235,8 +235,8 @@ span.command {
     width: 190px;
     padding: 5px;
 }
-#screenshots div.screenshot a:hover img {border: 1px solid rgb(255,75,0);}
-#screenshots div.contributor
+#templates div.screenshot a:hover img {border: 1px solid rgb(255,75,0);}
+#templates div.contributor
 {
   text-align: right;
   font-weight: normal;

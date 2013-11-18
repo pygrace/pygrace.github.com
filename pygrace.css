@@ -6,6 +6,7 @@ body {
     margin-right: auto;
     width: 650px;
     font-family: Verdana, Helvetica, Arial, sans-serif;
+    overflow-y:scroll;
 }
 
 /* Only the about section will be displayed at the start (all of the others
@@ -211,11 +212,11 @@ span.command {
 #installation a:hover {color:rgb(150,75,0)}
 #installation a:active {color:rgb(150,75,0);}
 
-/* --------------------------------------------------------- templates */
-#templates {
+/* --------------------------------------------------------- figures */
+#figures {
     margin-right: 0px;
 }
-#templates div.screenshot
+#figures div.screenshot
 {
     margin-bottom: 20px;
     margin-left: 7px;
@@ -223,11 +224,11 @@ span.command {
     float: left;
     text-align: center;
 }	
-#templates div.bottom
+#figures div.bottom
 {
     clear: both;
 }	
-#templates div.screenshot img
+#figures div.screenshot img
 {
     display: inline;
     margin: 0px;
@@ -235,8 +236,8 @@ span.command {
     width: 190px;
     padding: 5px;
 }
-#templates div.screenshot a:hover img {border: 1px solid rgb(255,75,0);}
-#templates div.contributor
+#figures div.screenshot a:hover img {border: 1px solid rgb(255,75,0);}
+#figures div.contributor
 {
   text-align: right;
   font-weight: normal;

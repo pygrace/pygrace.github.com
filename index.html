@@ -30,13 +30,13 @@
         document.getElementById('about').style.display = 'none';
         document.getElementById('installation').style.display = 'none'; 
         document.getElementById('session').style.display = 'none';
-        document.getElementById('templates').style.display = 'none';
+        document.getElementById('figures').style.display = 'none';
         document.getElementById('publications').style.display = 'none';
         document.getElementById(divtoshow).style.display = 'block';
         document.getElementById('about'+'-nav').style.color = 'rgb(0,0,0)';
         document.getElementById('installation'+'-nav').style.color = 'rgb(0,0,0)'; 
         document.getElementById('session'+'-nav').style.color = 'rgb(0,0,0)';
-        document.getElementById('templates'+'-nav').style.color = 'rgb(0,0,0)';
+        document.getElementById('figures'+'-nav').style.color = 'rgb(0,0,0)';
         document.getElementById('publications'+'-nav').style.color = 'rgb(0,0,0)';
         document.getElementById(divtoshow+'-nav').style.color = 'rgb(255,75,0)';
       };
@@ -64,12 +64,14 @@
 	       onclick="on_navigation_click('session');return
       false;">Session</a></li>
   -->
-	<li><a href="#" id="templates-nav"
-	       onclick="on_navigation_click('templates');return
-			false;">Templates</a></li>
+	<li><a href="#" id="figures-nav"
+	       onclick="on_navigation_click('figures');return
+			false;">Figures</a></li>
+  <!--
 	<li><a href="#" id="publications-nav"
 	       onclick="on_navigation_click('publications');return
 			false;">Publications</a></li>
+  -->
       </ul>
     </div>
     
@@ -79,7 +81,7 @@
       <div id="about" class="content">
         <!--<h2>About</h2>-->
 	<p>
-	  The pygrace project is a set of tools designed to
+	  The pygrace project is a set of bindings and tools designed to
 	  act as an interface between
 	  the <a href="http://www.python.org/">Python</a> programming
 	  language and
@@ -101,8 +103,8 @@
 
   <p>
   <!--pygrace was originally created by <a href="http://datascopeanalytics.com/who-we-are/">Dean Malmgren</a>, <a href="http://datascopeanalytics.com/who-we-are/">Mike Stringer</a>, and-->
-  pygrace was originally created by Dean Malmgren, Mike Stringer, and
-  members of the <a href="http://www.amaral-lab.org/">Amaral Lab</a>. When they decided to let pygrace die a slow death, its maintainance was taken over by <a href="http://stoufferlab.org/people/stouffer/">Daniel Stouffer</a> and the <a href="http://stoufferlab.org">Stouffer Lab</a>.
+  pygrace is the combined result of two separate packages: <a href="http://www.cacr.caltech.edu/~mmckerns/pygrace.html">pygrace</a> that was created by <a href="http://www.cacr.caltech.edu/~mmckerns/home.html">Mike McKerns</a> and <a href="http://pygrace.sourceforge.net/">PyGrace</a> that was created by <a href="http://datascopeanalytics.com/who-we-are/">Dean Malmgren</a>, <a href="http://datascopeanalytics.com/who-we-are/">Mike Stringer</a> and
+  members of the <a href="http://www.amaral-lab.org/">Amaral Lab</a>. At present, pygrace is primarily maintained and developed by <a href="http://stoufferlab.org/">Daniel Stouffer</a>.
 	</p>
 
 	
@@ -151,8 +153,8 @@ TUTORIAL -->
 	  and give new users an idea of how pygrace is structured.
 	  After reading this brief document, the next step for
 	  learning to use pygrace is to go through the examples that
-	  are located in the <span class="path"> pygrace
-	  Examples</span> directory.
+	  are located in the <a href="https://github.com/pygrace/pygrace/tree/master/examples">pygrace
+	  examples</a> directory.
 	</p>
 	
 	<h3>Installation</h3>
@@ -199,11 +201,11 @@ TUTORIAL -->
 	</p>
 
 	<span class="command">
-	  import PyGrace
+	  import pygrace
 	</span>
 
 	<p>
-	  If no error is raised, then installation was succesful!
+	  If no error is raised, then installation was successful!
 	</p>
 
 	<h3>Getting started</h3>
@@ -211,8 +213,7 @@ TUTORIAL -->
 	<p>
 	  pygrace was designed so that, &ldquo;anything you can do in
 	  Grace, you can do in pygrace.&rdquo; The best way to get
-	  started is to go through the examples in the Examples
-	  directory.  Each example is fully commented.  You may also
+	  started is to go through the <a href="https://github.com/pygrace/pygrace/tree/master/examples">examples</a>.  Each example is fully commented.  You may also
 	  find the following three documents helpful:
 	</p>
 
@@ -223,10 +224,10 @@ TUTORIAL -->
 	       href="crow.pdf">
 	      <img class="installationimage" src="images/crow.png"/>
 	    <span class="title">
-	      pygrace templates entity-relationship diagram
+	      pygrace entity-relationship diagram
 	    </span>
 	    <span class="caption">
-	      The inheritance structure of pygrace templates mirrors the file
+	      The inheritance structure of pygrace mirrors the file
 	      structure of Grace.  This diagram uses &ldquo;crow's
 	      foot&rdquo; notation to indicate the relationship
 	      between different entities. One thing to note is that
@@ -243,11 +244,11 @@ TUTORIAL -->
 	       href="cheatsheet.pdf">
 	      <img class="installationimage" src="images/cheatsheet.png"/>
 	    <span class="title">
-	      pygrace templates Cheatsheet
+	      pygrace cheatsheet
 	    </span>
 	    <span class="caption">
 	      This handy cheatsheet shows the all of the methods and
-	      attributes of each pygrace templates class.  It can be generated
+	      attributes of each pygrace class.  It can be generated
 	      for any custom template by calling the write_cheatsheet
 	      method.
 	    </span>
@@ -259,11 +260,11 @@ TUTORIAL -->
 	       href="fulldiagram.pdf">
 	      <img class="installationimage" src="images/fulldiagram.png"/>
 	    <span class="title">
-	      pygrace templates attribute diagram
+	      pygrace attribute diagram
 	    </span>
 	    <span class="caption">
 	      This is a detailed diagram that shows all of the
-	      attributes of the standard pygrace templates objects.
+	      attributes of the standard pygrace objects.
 	    </span>
 	    </a>
           </li>
@@ -288,16 +289,16 @@ TUTORIAL -->
       </div>
 
 <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ TEMPLATES -->
-      <div id="templates" class="content">
+      <div id="figures" class="content">
       <!--
       <h2>Examples</h2>
       -->
 
 	<p>
 	  Here are some examples of the types of figures that you can
-	  create with pygrace templates. If you are interested in
-	  contributing a screenshot of a figure made in pygrace templates,
-    <a href="mailto:pygrace@stoufferlab.org">contact us</a>.
+	  create with pygrace. If you are interested in
+	  contributing a screenshot of a figure made in pygrace,
+    <a href="http://github.com/pygrace/pygrace/issues">contact us</a>.
 	</p>
 
 
